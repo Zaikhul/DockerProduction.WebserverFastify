@@ -11,7 +11,7 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 
 # Hapus semua volume
-docker volume rm $(docker volume ls -q)
+docker volume prune -f
 
 # Hapus semua network yang tidak digunakan
 docker network prune -f
